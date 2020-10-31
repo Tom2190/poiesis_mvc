@@ -50,17 +50,23 @@
             </div>
             <div class="form-group">
                 <label asp-for="generoDeEscritura" class="control-label"></label>
-                <select asp-for="generoDeEscritura" class="form-control"></select>
+                <select asp-for="generoDeEscritura" class="form-control" asp-items="Html.GetEnumSelectList<GeneroDeEscritura>()">
+                    <option selected="selected" value="">Please select</option>
+                </select>
                 <span asp-validation-for="generoDeEscritura" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="frecuenciaDeLectura" class="control-label"></label>
-                <select asp-for="frecuenciaDeLectura" class="form-control"></select>
+                <select asp-for="frecuenciaDeLectura" class="form-control" asp-items="Html.GetEnumSelectList<FrecuenciaDeLectura>()">
+                    <option selected="selected" value="">Please select</option>
+                </select>
                 <span asp-validation-for="frecuenciaDeLectura" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="eleccionDiaYHorario" class="control-label"></label>
-                <select asp-for="eleccionDiaYHorario" class="form-control"></select>
+                <select asp-for="eleccionDiaYHorario" class="form-control" asp-items="Html.GetEnumSelectList<EleccionDiaYHorario>()">
+                    <option selected="selected" value="">Please select</option>
+                </select>
                 <span asp-validation-for="eleccionDiaYHorario" class="text-danger"></span>
             </div>
             <div class="form-group">
