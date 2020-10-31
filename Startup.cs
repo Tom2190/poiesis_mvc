@@ -28,10 +28,11 @@ namespace poiesis_mvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
             services.AddDbContext<PoiesisDBContext>(
              options =>
                 options.UseSqlServer(Configuration["ConnectionString:PoiesisDBConnection"]));
-           
+
             services.AddMvc().AddNewtonsoftJson(o =>
             {
                 o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
