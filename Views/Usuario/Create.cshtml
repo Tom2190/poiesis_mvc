@@ -1,13 +1,9 @@
 ﻿@model poiesis_mvc.Models.Usuario
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Inscripción";
 }
-
-<h1>Create</h1>
-
-<h4>Usuario</h4>
-<hr />
+<section class="inscripcion cover-img-bg">
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -78,6 +74,7 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+</section>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

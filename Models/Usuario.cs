@@ -26,10 +26,13 @@ namespace poiesis_mvc.Models
         public String experienciaDeEscritura { get; set; }
         [Display(Name = "Contraseña")]
         public String contrasenia { get; set; }
+        [Display(Name = "Género de escritura")]
         [EnumDataType(typeof(GeneroDeEscritura))]
          public GeneroDeEscritura generoDeEscritura { get; set; }
+        [Display(Name = "Frecuencia de lectura")]
         [EnumDataType(typeof(FrecuenciaDeLectura))]
         public FrecuenciaDeLectura frecuenciaDeLectura { get; set; }
+        [Display(Name = "Elección de día y horario")]
         [EnumDataType(typeof(EleccionDiaYHorario))]
         public EleccionDiaYHorario eleccionDiaYHorario { get; set; }
 

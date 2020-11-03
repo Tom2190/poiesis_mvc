@@ -28,6 +28,10 @@ main {
     font-family: "Arvo", serif;
 }
 
+label {
+    text-transform: capitalize;
+}
+
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 a.navbar-brand {
@@ -134,15 +138,12 @@ footer .link-email {
 
 /* Hero styles
 -------------------------------------------------- */
-.home .hero-image {
-    background-image: url("../assets/background-coffee.jpg");
-}
-
 .hero-image img {
     width: 200px;
 }
 
 .hero-image {
+    background-image: url("../assets/background-coffee.jpg") ;
     height: 330px;
     background-position: 50% 20%;
     background-repeat: no-repeat;
@@ -170,4 +171,11 @@ footer .link-email {
     .hero-image img {
         width: 150px;
     }
+}
+
+/* Backgrounnd cover image section styles
+-------------------------------------------------- */
+
+.cover-img-bg {
+
 }
