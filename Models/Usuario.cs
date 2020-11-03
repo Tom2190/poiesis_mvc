@@ -19,6 +19,11 @@ namespace poiesis_mvc.Models
         public int idUsuario { get; set; }
         public String nombre { get; set; }
         public String apellido { get; set; }
+
+        public String nombreCompleto
+        {
+            get { return this.nombre + " " + this.apellido;}
+        }
         public String dni { get; set; }
         public String celular { get; set; }
         public String email { get; set; }

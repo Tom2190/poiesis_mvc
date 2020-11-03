@@ -13,14 +13,18 @@ namespace poiesis_mvc.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int idTexto { get; set;}
         [ForeignKey("Usuario")]
+        [Display(Name = "Nombre completo")]
         public int idUsuario { get; set; }
 
         [Display(Name = "Fecha publicación")]
         public DateTime fechaPublicacion { get; set; }
+        [Display(Name = "Título del texto")]
         public String titulo { get; set; }
+        [Display(Name = "Cuerpo del texto")]
         public String contenido { get; set; }
 
         [EnumDataType(typeof(GeneroDeEscritura))]
+        [Display(Name = "Género del texto")]
         public GeneroDeEscritura genero { get; set; }
 
         public virtual Usuario Usuario { get; set; }

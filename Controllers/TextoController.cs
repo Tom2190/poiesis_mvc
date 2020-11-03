@@ -48,7 +48,7 @@ namespace poiesis_mvc.Controllers
         // GET: Texto/Create
         public IActionResult Create()
         {
-            ViewData["idUsuario"] = new SelectList(_context.Usuarios, "idUsuario", "idUsuario");
+            ViewData["idUsuario"] = new SelectList(_context.Usuarios, "idUsuario", "nombreCompleto");
             return View();
         }
 
