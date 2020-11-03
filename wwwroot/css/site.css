@@ -1,10 +1,45 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿/* Accesibility issues with colorblind box */
+#blockColorblindContent {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    flex: 1;
+    overflow: auto;
+}
+
+.font-abril {
+    font-family: "Abril Fatface", cursive;
+}
+
+.font-arvo {
+    font-family: "Arvo", serif;
+}
+
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    display: block;
+    width: 80px;
+    height: 45px;
+    background-size: contain;
+    background-image: url(../assets/logo-green.svg);
+    background-repeat: no-repeat;
 }
 
 /* Provide sufficient contrast against white background */
@@ -58,14 +93,81 @@ html {
   min-height: 100%;
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    width: 100%;
+    white-space: nowrap;
+    background-color: #4eb7bc;
+}
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+footer a {
+    margin-right: 20px;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+footer .link-ig {
+    background-image: url("../assets/logo-instagram.svg");
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+}
+
+footer .link-email {
+    background-image: url("../assets/logo-email.svg");
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer .container {
+        padding: 5px 10px;
+    }
+
+}
+
+/* Hero styles
+-------------------------------------------------- */
+.home .hero-image {
+    background-image: url("../assets/background-coffee.jpg");
+}
+
+.hero-image img {
+    width: 200px;
+}
+
+.hero-image {
+    height: 330px;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78, 183, 188, 0.76);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .hero-image {
+        height: 230px;
+    }
+
+    .hero-image img {
+        width: 150px;
+    }
 }
