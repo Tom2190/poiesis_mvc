@@ -3,82 +3,99 @@
 @{
     ViewData["Title"] = "Edit";
 }
-
-<h1>Edit</h1>
-
-<h4>Usuario</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
+<section class="inscripcion">
+    <div class="hero-image">
+        <div class="hero-text">
+            <div>
+                <h1 class="font-abril">Editar usuario</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="idUsuario" />
-            <div class="form-group">
-                <label asp-for="nombre" class="control-label"></label>
-                <input asp-for="nombre" class="form-control" />
-                <span asp-validation-for="nombre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="apellido" class="control-label"></label>
-                <input asp-for="apellido" class="form-control" />
-                <span asp-validation-for="apellido" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="dni" class="control-label"></label>
-                <input asp-for="dni" class="form-control" />
-                <span asp-validation-for="dni" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="celular" class="control-label"></label>
-                <input asp-for="celular" class="form-control" />
-                <span asp-validation-for="celular" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="email" class="control-label"></label>
-                <input asp-for="email" class="form-control" />
-                <span asp-validation-for="email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="experienciaDeEscritura" class="control-label"></label>
-                <input asp-for="experienciaDeEscritura" class="form-control" />
-                <span asp-validation-for="experienciaDeEscritura" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="contrasenia" class="control-label"></label>
-                <input asp-for="contrasenia" class="form-control" />
-                <span asp-validation-for="contrasenia" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="generoDeEscritura" class="control-label"></label>
-                <select asp-for="generoDeEscritura" class="form-control" asp-items="Html.GetEnumSelectList<GeneroDeEscritura>()">
-                    <option selected="selected" value="">Please select</option>
-                </select>
-                <span asp-validation-for="generoDeEscritura" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="frecuenciaDeLectura" class="control-label"></label>
-                <select asp-for="frecuenciaDeLectura" class="form-control" asp-items="Html.GetEnumSelectList<FrecuenciaDeLectura>()">
-                    <option selected="selected" value="">Please select</option>
-                </select>
-                <span asp-validation-for="frecuenciaDeLectura" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="eleccionDiaYHorario" class="control-label"></label>
-                <select asp-for="eleccionDiaYHorario" class="form-control" asp-items="Html.GetEnumSelectList<EleccionDiaYHorario>()">
-                    <option selected="selected" value="">Please select</option>
-                </select>
-                <span asp-validation-for="eleccionDiaYHorario" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label asp-for="nombre" class="control-label mayusc"></label>
+                        <input asp-for="nombre" class="form-control" />
+                        <span asp-validation-for="nombre" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="apellido" class="control-label mayusc"></label>
+                        <input asp-for="apellido" class="form-control" />
+                        <span asp-validation-for="apellido" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="dni" class="control-label mayusc"></label>
+                        <input asp-for="dni" class="form-control" disabled />
+                        <span asp-validation-for="dni" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="celular" class="control-label mayusc"></label>
+                        <input asp-for="celular" class="form-control" />
+                        <span asp-validation-for="celular" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label asp-for="email" class="control-label mayusc"></label>
+                        <input asp-for="email" class="form-control" />
+                        <span asp-validation-for="email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="contrasenia" class="control-label"></label>
+                        <div class="input-group mb-3">
+                            <input asp-for="contrasenia" type="password" class="form-control" id="mostrarPass" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <input type="checkbox" aria-label="Checkbox for following text input" onclick="mostrarContrasenia()"><span class="pl-2">Mostrar</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="contrasenia" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="generoDeEscritura" class="control-label"></label>
+                        <select asp-for="generoDeEscritura" class="form-control" asp-items="Html.GetEnumSelectList<GeneroDeEscritura>()">
+                            <option selected="selected" value="">Please select</option>
+                        </select>
+                        <span asp-validation-for="generoDeEscritura" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="frecuenciaDeLectura" class="control-label"></label>
+                        <select asp-for="frecuenciaDeLectura" class="form-control" asp-items="Html.GetEnumSelectList<FrecuenciaDeLectura>()">
+                            <option selected="selected" value="">Please select</option>
+                        </select>
+                        <span asp-validation-for="frecuenciaDeLectura" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label asp-for="eleccionDiaYHorario" class="control-label"></label>
+                        <select asp-for="eleccionDiaYHorario" class="form-control" asp-items="Html.GetEnumSelectList<EleccionDiaYHorario>()">
+                            <option selected="selected" value="">Please select</option>
+                        </select>
+                        <span asp-validation-for="eleccionDiaYHorario" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="experienciaDeEscritura" class="control-label"></label>
+                        <textarea asp-for="experienciaDeEscritura" class="form-control"></textarea>
+                        <span asp-validation-for="experienciaDeEscritura" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn btn-info" />
+                    </div>
+                </div>
             </div>
         </form>
-    </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+        <div>
+            <a asp-action="Index">Volver a la lista de usuarios</a>
+        </div>
+
+    </div>
+</section>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
