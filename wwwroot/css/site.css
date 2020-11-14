@@ -91,14 +91,6 @@ html {
     }
 }
 
-.border-top {
-    border-top: 1px solid #e5e5e5;
-}
-
-.border-bottom {
-    border-bottom: 1px solid #e5e5e5;
-}
-
 .box-shadow {
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
@@ -121,11 +113,11 @@ html {
     background-color: #4eb7bc;
 }
 
-    .footer .container {
-        display: flex;
-        align-items: center;
-        padding: 5px 0;
-    }
+.footer .container {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
 
 footer a {
     margin-right: 20px;
@@ -194,4 +186,19 @@ footer .link-email {
 -------------------------------------------------- */
 
 .cover-img-bg {
+    background-image: url(../assets/background-coffee.jpg);
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.blue-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 40px 15px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78, 183, 188, 0.76);
 }
