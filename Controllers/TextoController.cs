@@ -82,7 +82,7 @@ namespace poiesis_mvc.Controllers
             {
                 return NotFound();
             }
-            ViewData["idUsuario"] = new SelectList(_context.Usuarios, "idUsuario", "idUsuario", texto.idUsuario);
+            ViewData["idUsuario"] = new SelectList(_context.Usuarios, "idUsuario", "nombreCompleto", texto.idUsuario);
             return View(texto);
         }
 
@@ -118,7 +118,7 @@ namespace poiesis_mvc.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["idUsuario"] = new SelectList(_context.Usuarios, "idUsuario", "idUsuario", texto.idUsuario);
+            ViewData["idUsuario"] = new SelectList(_context.Usuarios, "idUsuario", "nombreCompleto", texto.idUsuario);
             return View(texto);
         }
 

@@ -4,50 +4,71 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<section>
+    <div class="hero-image">
+        <div class="hero-text">
+            <div>
+                <h1 class="font-abril">Editar texto</h1>
+            </div>
+        </div>
+    </div>
 
-<h4>Texto</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+    <div class="container mt-5 mb-5">
+
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="idTexto" />
-            <div class="form-group">
-                <label asp-for="idUsuario" class="control-label"></label>
-                <select asp-for="idUsuario" class="form-control" asp-items="ViewBag.idUsuario"></select>
-                <span asp-validation-for="idUsuario" class="text-danger"></span>
+            <div class="row">
+
+                <div class="col-sm-12 col-md-6">
+                    <input type="hidden" asp-for="idTexto" />
+
+                    <div class="form-group">
+                        <label asp-for="idUsuario" class="control-label"></label>
+                        <select asp-for="idUsuario" class="form-control" asp-items="ViewBag.idUsuario"></select>
+                        <span asp-validation-for="idUsuario" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="fechaPublicacion" class="control-label"></label>
+                        <input asp-for="fechaPublicacion" class="form-control" />
+                        <span asp-validation-for="fechaPublicacion" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="form-group">
+                        <label asp-for="titulo" class="control-label"></label>
+                        <input asp-for="titulo" class="form-control" />
+                        <span asp-validation-for="titulo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="genero" class="control-label"></label>
+                        <select asp-for="genero" class="form-control" asp-items="Html.GetEnumSelectList<GeneroDeEscritura>()">
+                            <option selected="selected" value="">Please select</option>
+                        </select>
+                        <span asp-validation-for="genero" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="fechaPublicacion" class="control-label"></label>
-                <input asp-for="fechaPublicacion" class="form-control" />
-                <span asp-validation-for="fechaPublicacion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="titulo" class="control-label"></label>
-                <input asp-for="titulo" class="form-control" />
-                <span asp-validation-for="titulo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="contenido" class="control-label"></label>
-                <input asp-for="contenido" class="form-control" />
-                <span asp-validation-for="contenido" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="genero" class="control-label"></label>
-                <select asp-for="genero" class="form-control"></select>
-                <span asp-validation-for="genero" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="contenido" class="control-label"></label>
+                        <input asp-for="contenido" class="form-control" />
+                        <span asp-validation-for="contenido" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn btn-info" />
+                    </div>
+
+                </div>
             </div>
         </form>
+        <div>
+            <a asp-action="Index">Volver a la lista de textos</a>
+        </div>
     </div>
-</div>
+</section>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

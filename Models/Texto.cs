@@ -13,17 +13,25 @@ namespace poiesis_mvc.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int idTexto { get; set;}
         [ForeignKey("Usuario")]
+
+        [Required(ErrorMessage = "Este campo es requerido")]
         [Display(Name = "Nombre completo")]
         public int idUsuario { get; set; }
 
+        [Required(ErrorMessage = "Este campo es requerido")]
         [Display(Name = "Fecha publicación")]
         public DateTime fechaPublicacion { get; set; }
+
+        [Required(ErrorMessage = "Este campo es requerido")]
         [Display(Name = "Título del texto")]
         public String titulo { get; set; }
+
+        [Required(ErrorMessage = "Este campo es requerido")]
         [Display(Name = "Cuerpo del texto")]
         public String contenido { get; set; }
 
         [EnumDataType(typeof(GeneroDeEscritura))]
+        [Required(ErrorMessage = "Este campo es requerido")]
         [Display(Name = "Género del texto")]
         public GeneroDeEscritura genero { get; set; }
 
