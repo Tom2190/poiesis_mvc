@@ -160,6 +160,11 @@ footer .link-email {
     position: relative;
 }
 
+    .hero-image.ficcion {
+        background-image: url("../assets/fondo-ficcion.jpg");
+        background-position: 50% 95%;
+    }
+
 /* Place text in the middle of the image */
 .hero-text {
     width: 100%;
@@ -170,6 +175,10 @@ footer .link-email {
     justify-content: center;
     color: white;
     text-align: center;
+}
+
+.hero-image.ficcion .hero-text {
+    background-color: rgba(133, 78, 188, 0.68);
 }
 
 @media only screen and (max-width: 600px) {

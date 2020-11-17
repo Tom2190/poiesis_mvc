@@ -18,8 +18,10 @@ namespace poiesis_mvc.Models
         [Display(Name = "Nombre completo")]
         public int idUsuario { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0: dd-mm-yyyy}")]
         [Required(ErrorMessage = "Este campo es requerido")]
-        [Display(Name = "Fecha publicación")]
+        [Display(Name = "Fecha de publicación")]
         public DateTime fechaPublicacion { get; set; }
 
         [Required(ErrorMessage = "Este campo es requerido")]
