@@ -211,3 +211,337 @@ footer .link-email {
     height: 100%;
     background-color: rgba(78, 183, 188, 0.76);
 }
+
+/* Área común css*/
+.area-comun {
+    flex: 1;
+}
+
+    .area-comun .textos {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 60px auto;
+        overflow: auto;
+        flex-wrap: wrap;
+    }
+
+    .area-comun .texto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 130px;
+        background-color: rgba(133, 78, 188, 0.68);
+        border-radius: 25px;
+    }
+
+        .area-comun .texto h3 {
+            color: #ffffff;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+        }
+
+        .area-comun .texto h4 {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+/*Detalle texto css*/
+.seccion-texto {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.botones {
+    padding: 60px 0px 0px 0px;
+}
+
+.boton-editar {
+    display: inline;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4eb7bc;
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    height: 45px;
+}
+
+.boton-borrar {
+    display: inline;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #bc4e4e;
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    height: 45px;
+    margin-top: 12px;
+}
+
+.texto-contenido {
+    overflow: scroll;
+    font-weight: 200;
+    color: #144556;
+    padding: 40px 0px 0px 0px;
+    line-height: 2;
+}/* Accesibility issues with colorblind box */
+#blockColorblindContent {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    flex: 1;
+    overflow: auto;
+}
+
+.card-container {
+    background: #ffffff;
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.font-abril {
+    font-family: "Abril Fatface", cursive;
+}
+
+.font-arvo {
+    font-family: "Arvo", serif;
+}
+
+label.mayusc {
+    text-transform: capitalize;
+}
+
+input:disabled {
+    cursor: not-allowed;
+}
+
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    display: block;
+    width: 80px;
+    height: 45px;
+    background-size: contain;
+    background-image: url(../assets/logo-green.svg);
+    background-repeat: no-repeat;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    width: 100%;
+    white-space: nowrap;
+    background-color: #4eb7bc;
+}
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+footer a {
+    margin-right: 20px;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+footer .link-ig {
+    background-image: url("../assets/logo-instagram.svg");
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+}
+
+footer .link-email {
+    background-image: url("../assets/logo-email.svg");
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer .container {
+        padding: 5px 10px;
+    }
+}
+
+/* Hero styles
+-------------------------------------------------- */
+.hero-image img {
+    width: 200px;
+}
+
+.hero-image {
+    background-image: url("../assets/background-coffee.jpg");
+    height: 300px;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+    .hero-image.ficcion {
+        background-image: url("../assets/fondo-ficcion.jpg");
+        background-position: 50% 95%;
+    }
+
+/* Place text in the middle of the image */
+.hero-text {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78, 183, 188, 0.76);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-image.ficcion .hero-text {
+    background-color: rgba(133, 78, 188, 0.68);
+}
+
+@media only screen and (max-width: 600px) {
+    .hero-image {
+        height: 230px;
+    }
+
+        .hero-image img {
+            width: 150px;
+        }
+}
+
+/* Backgrounnd cover image section styles
+-------------------------------------------------- */
+
+.cover-img-bg {
+    background-image: url(../assets/background-coffee.jpg);
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.blue-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 40px 15px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78, 183, 188, 0.76);
+}
+
+    .area-comun .texto {
+        height: 130px;
+        background-color: rgba(133, 78, 188, 0.68);
+        border-radius: 25px;
+    }
+
+        .area-comun .texto h3 {
+            color: #ffffff;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+        }
+
+        .area-comun .texto h4 {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+        }
