@@ -53,7 +53,7 @@
                     <div class="form-group">
                         <label asp-for="contenido" class="control-label"></label>                    
                         <pre>
-                        <textarea asp-for="contenido" class="form-control"></textarea>
+                        <textarea asp-for="contenido" class="form-control" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
                         </pre>
                         <span asp-validation-for="contenido" class="text-danger"></span>
                     </div>

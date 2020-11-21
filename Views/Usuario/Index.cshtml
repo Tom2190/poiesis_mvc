@@ -4,94 +4,31 @@
     ViewData["Title"] = "Index";
 }
 
-    <section class="cover-img-bg full-height">
-        <div class="blue-overlay">
-            <div class="container">
-                <div class="card-container">
-                    <p>
-                        <a asp-action="Create">Create New</a>
-                    </p>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.nombre)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.apellido)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.dni)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.celular)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.email)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.experienciaDeEscritura)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.contrasenia)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.generoDeEscritura)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.frecuenciaDeLectura)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.eleccionDiaYHorario)
-                                </th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var item in Model)
-                            {
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.nombre)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.apellido)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.dni)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.celular)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.email)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.experienciaDeEscritura)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.contrasenia)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.generoDeEscritura)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.frecuenciaDeLectura)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.eleccionDiaYHorario)
-                                    </td>
-                                    <td>
-                                        <a asp-action="Edit" asp-route-id="@item.idUsuario">Edit</a> |
-                                        <a asp-action="Details" asp-route-id="@item.idUsuario">Details</a> |
-                                        <a asp-action="Delete" asp-route-id="@item.idUsuario">Delete</a>
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-
+<section class="cover-img-bg full-height">
+    <div class="blue-overlay">
+        <div class="container">
+            <div class="card-container p-4">
+                <h2>Usuarios</h2>
+                <p>
+                    <a asp-action="Create" class="btn btn-info">Crear usuario</a>
+                </p>
+                <div class="row row-cols-3">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.nombreCompleto)</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayFor(modelItem => item.email)</h6>
+                                    <a asp-action="Edit" asp-route-id="@item.idUsuario" class="card-link">Editar</a>
+                                    <a asp-action="Details" asp-route-id="@item.idUsuario" class="card-link">Detalle</a>
+                                    <a asp-action="Delete" asp-route-id="@item.idUsuario" class="card-link text-danger">Eliminar</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>

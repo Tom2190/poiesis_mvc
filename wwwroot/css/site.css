@@ -40,7 +40,7 @@ main {
     font-family: "Arvo", serif;
 }
 
-label.mayusc {
+.mayusc {
     text-transform: capitalize;
 }
 
@@ -50,6 +50,10 @@ input:disabled {
 
 pre {
     white-space: pre-line;
+}
+
+textarea {
+    max-height: 500px;
 }
 
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
@@ -70,6 +74,10 @@ a.navbar-brand {
 a {
     color: #0366d6;
 }
+
+    a:hover {
+        text-decoration: none !important;
+    }
 
 .btn-primary {
     color: #fff;
@@ -223,10 +231,14 @@ footer .link-email {
     height: 130px;
     background-color: rgba(133, 78, 188, 0.68);
     border-radius: 25px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.area-comun .texto:hover {
+    background-color: rgba(133, 78, 188, 1);
 }
 
 .area-comun .texto h3 {

@@ -4,83 +4,29 @@
     ViewData["Title"] = "Index";
 }
 
-    <section class="area-comun">
-        <div class="hero-image ficcion">
-            <div class="hero-text">
-                <div>
-                    <h1 class="font-abril">Área común</h1>
-                </div>
+<section class="area-comun">
+    <div class="hero-image ficcion">
+        <div class="hero-text">
+            <div>
+                <h1 class="font-abril">Área común</h1>
             </div>
         </div>
+    </div>
 
-    <div class="container">
-        <a class="btn btn-info" asp-action="Create">Agregar texto</a>
+    <div class="container mt-4 mb-4">
+        <a class="btn btn-info mb-4" asp-action="Create">Agregar texto</a>
         <div class="row row-cols-3">
             @foreach (var item in Model)
             {
-                <div class="col-md-4 texto">
-                    <div><a asp-action="Details" asp-route-id="@item.idTexto"><h3>@Html.DisplayFor(modelItem => item.titulo)</h3></a></div>
-                    <div><h4 class="font-abril">@Html.DisplayFor(modelItem => item.Usuario.nombreCompleto)</h4></div>
+                <div class="col-md-4">
+                    <a asp-action="Details" asp-route-id="@item.idTexto">
+                        <div class="texto">
+                            <div><h3>@Html.DisplayFor(modelItem => item.titulo)</h3></div>
+                            <div><h4 class="font-abril">@Html.DisplayFor(modelItem => item.Usuario.nombreCompleto)</h4></div>
+                        </div>
+                    </a>
                 </div>
             }
         </div>
     </div>
-    </section>
-
-
-
-
-
-
-@*<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.fechaPublicacion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.titulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.contenido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.genero)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Usuario)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.fechaPublicacion)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.titulo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.contenido)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.genero)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usuario.idUsuario)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.idTexto">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.idTexto">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.idTexto">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>*@
+</section>
