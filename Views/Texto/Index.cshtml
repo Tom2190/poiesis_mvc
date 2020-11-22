@@ -18,7 +18,7 @@
         <div class="row row-cols-3">
             @foreach (var item in Model)
             {
-                <div class="col-md-4">
+                <div class="col-md-4 col-texto">
                     <a asp-action="Details" asp-route-id="@item.idTexto">
                         <div class="texto">
                             <div><h3>@Html.DisplayFor(modelItem => item.titulo)</h3></div>
