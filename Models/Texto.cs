@@ -11,15 +11,15 @@ namespace poiesis_mvc.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int idTexto { get; set;}
+        public int idTexto { get; set; }
         [ForeignKey("Usuario")]
 
         [Required(ErrorMessage = "Este campo es requerido")]
         [Display(Name = "Nombre completo")]
         public int idUsuario { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0: dd-MM-yyyy}")]
+        //[DataType(DataType.Date)]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0: dd-MM-yyyy}")]
         [Required(ErrorMessage = "Este campo es requerido")]
         [Display(Name = "Fecha de publicación")]
         public DateTime fechaPublicacion { get; set; }
@@ -39,6 +39,10 @@ namespace poiesis_mvc.Models
 
         public virtual Usuario Usuario { get; set; }
 
+        public override string ToString()
+        {
+            return "Texto: " + fechaPublicacion + " " + titulo + " " + genero;
+        }
     }
 
 }

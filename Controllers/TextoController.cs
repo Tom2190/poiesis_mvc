@@ -78,6 +78,7 @@ namespace poiesis_mvc.Controllers
             }
 
             var texto = await _context.Textos.FindAsync(id);
+            Console.WriteLine(texto.ToString());
             if (texto == null)
             {
                 return NotFound();

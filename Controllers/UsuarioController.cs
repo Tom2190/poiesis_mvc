@@ -74,6 +74,7 @@ namespace poiesis_mvc.Controllers
             }
 
             var usuario = await _context.Usuarios.FindAsync(id);
+            Console.WriteLine(usuario.ToString());
             if (usuario == null)
             {
                 return NotFound();

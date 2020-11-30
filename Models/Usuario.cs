@@ -72,6 +72,11 @@ namespace poiesis_mvc.Models
         public EleccionDiaYHorario eleccionDiaYHorario { get; set; }
 
         public IEnumerable<Texto> Texto { get; set; }
+
+        public override string ToString()
+        {
+            return "Usuario: " + nombreCompleto + " " + contrasenia + " " + email;
+        }
     }
 
 }

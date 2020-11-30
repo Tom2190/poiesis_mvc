@@ -23,9 +23,7 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="fechaPublicacion" class="control-label"></label>
-                        @*<input asp-for="fechaPublicacion" class="form-control" />*@
-                        <input type="date" asp-for="fechaPublicacion" class="form-control" id="fechaCreacionTexto"/>
-                        @*<input asp-for="fechaPublicacion" class="form-control" value="@DateTime.Today.ToString("dd-mm-yyyy")" />*@
+                        <input asp-for="fechaPublicacion" class="form-control" />
                         <span asp-validation-for="fechaPublicacion" class="text-danger"></span>
                     </div>
                 </div>
