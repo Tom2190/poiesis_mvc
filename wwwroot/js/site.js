@@ -11,5 +11,4 @@ function mostrarContrasenia() {
         x.type = "password";
     }
 }
-
 document.getElementById('fechaCreacionTexto').value = new Date().toDateInputValue();

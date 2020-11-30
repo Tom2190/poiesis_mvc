@@ -51,6 +51,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
+                        @* asp-x es un tag helper de <a> para Razor *@
                         <label asp-for="contenido" class="control-label"></label>                    
                         <pre>
                         <textarea asp-for="contenido" class="form-control" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
